@@ -34,7 +34,4 @@ app.get("/api/:date?", function (req, res) {
   res.json({ unix, utc });
 });
 
-var listener = app.listen(
-  port,
-  console.log("Your app is listening on port " + port)
-);
+app.listen(port, () => console.log(`Your app is listening on port ${port}`));
